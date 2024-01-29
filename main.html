@@ -1,0 +1,35 @@
+<head>
+  <title>mwapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div id="react-target"></div>
+</body>
+
+<script type="text/html" id="dashboard">
+  {{#if canAccessDashboard}}
+      <p>You're logged in as a user.</p>
+      <p><a href="#" class="logout">Logout</a></p>
+  {{else}}
+      <p>You don't have access to the dashboard.</p>
+  {{/if}}
+</script>
+
+<!-- Template for the register form -->
+<script type="text/html" id="register">
+  <form id="registerForm">
+      <input type="email" name="registerEmail" placeholder="Email">
+      <input type="password" name="registerPassword" placeholder="Password">
+
+      <!-- Assuming a select box for role selection -->
+      <select name="roleSelect">
+          <option value="vendor">Vendor</option>
+          <option value="user">User</option>
+          <option value="borrower">Borrower</option>
+      </select>
+
+      <input type="submit" value="Register">
+  </form>
+</script>
+
